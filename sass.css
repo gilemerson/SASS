@@ -1,0 +1,72 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+/* STEP 1: Variables */
+header, footer {
+  font: 100%/1.4 Impact, serif; }
+
+aside {
+  font-family: Impact, serif; }
+
+/* STEP 2: Nesting CSS selectors */
+header h1 {
+  color: red; }
+header p {
+  text-transform: uppercase; }
+
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+/* STEP 4: Mixins */
+header {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: lightblue; }
+
+footer {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: lightblue; }
+
+/* STEP 5: Extend/Inheritance */
+.message, .success, .error, .warning {
+  border: 1px solid grey;
+  padding: 1em;
+  margin: 1em;
+  color: #333;
+  font-weight: bold;
+  background-color: lightyellow; }
+
+.success {
+  background-color: lightgreen; }
+
+.error {
+  background-color: lightpink; }
+
+.warning {
+  background-color: orange; }
+
+/* STEP 6: Operators */
+article[role="main"] {
+  float: left;
+  width: 62.5%; }
+
+aside[role="complementary"] {
+  float: right;
+  width: 31.25%; }
+
+footer {
+  clear: both; }
+
+/* http://sass-lang.com/guide */
+
+/*# sourceMappingURL=sass.css.map */

@@ -1,0 +1,84 @@
+@import 'reset';
+
+/* STEP 1: Variables */
+$font-stack: Impact, serif;
+$secondary-color: lightblue;
+
+header, footer {
+	font: 100%/1.4 $font-stack;
+}
+
+aside {
+	font-family: $font-stack;
+}
+
+/* STEP 2: Nesting CSS selectors */
+header {
+	h1{
+		color: red;
+	}
+	p{
+		text-transform: uppercase;
+	}
+}
+
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+
+/* STEP 4: Mixins */
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+header{
+	@include border-radius(10px);
+	background-color: $secondary-color;
+}
+footer {
+	@include border-radius(5px);
+	background-color: $secondary-color;
+}
+
+/* STEP 5: Extend/Inheritance */
+.message {
+	border: 1px solid grey;
+	padding: 1em;
+	margin: 1em;
+	color: #333;
+	font-weight: bold;
+	background-color: lightyellow;
+}
+
+.success {
+	@extend .message;
+	background-color: lightgreen;
+}
+
+.error {
+	@extend .message;
+	background-color: lightpink;
+}
+
+.warning {
+	@extend .message;
+	background-color: orange;
+}
+
+/* STEP 6: Operators */
+article[role="main"]{
+	float: left;
+	width: 600px / 960px * 100%;
+}
+aside[role="complementary"]{
+	float: right;
+	width: 300px / 960px * 100%;
+}
+footer {
+	clear: both;
+}
+
+/* http://sass-lang.com/guide */
